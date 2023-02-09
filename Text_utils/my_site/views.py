@@ -7,10 +7,10 @@ def index(request):
 
 
 def analyze(request):
-    djtext = request.GET.get('text','default')
+    djtext = request.POST.get('text','default')
     
-    removepunc = request.GET.get('removepunc','off')
-    uppercase = request.GET.get('uppercase','off')
+    removepunc = request.POST.get('removepunc','off')
+    uppercase = request.POST.get('uppercase','off')
     if removepunc=="on":
         punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
         for ele in djtext:
